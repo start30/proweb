@@ -1,0 +1,72 @@
+<html>
+<head>
+    <title>Tabla de Amortización</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+          rel="stylesheet" 
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
+          crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="mb-4">Formulario de Datoss</h2>
+        <form method="post">
+            
+            <!-- Edad -->
+            <div class="mb-3">
+                <label for="Edad" class="form-label">Edad</label>
+                <input type="number" class="form-control" id="Edad" name="Edad" placeholder="Ingrese su edad">
+            </div>
+
+            <!-- País de nacimiento -->
+            <div class="mb-3">
+                <label for="Pais_de_nacimiento" class="form-label">País de nacimiento</label>
+                <input type="text" class="form-control" id="Pais_de_nacimiento" name="Pais_de_nacimiento" placeholder="Ingresa tu nacionalidad">
+            </div>
+
+            <!-- Ingreso mensual -->
+            <div class="mb-3">
+                <label for="Ingresos_mensuales" class="form-label">Ingreso mensual</label>
+                <input type="number" class="form-control" id="Ingresos_mensuales" name="Ingresos_mensuales" placeholder="Coloca tu ingreso mensual">
+            </div>
+
+            <!-- Buró de crédito -->
+            <div class="mb-3">
+                <label for="Buro_de_credito" class="form-label">Buró de crédito</label>
+                <select class="form-select" id="Buro_de_credito" name="Buro_de_credito">
+                    <option value="bueno">Bueno</option>
+                    <option value="regular">Regular</option>
+                    <option value="malo">Malo</option>
+                </select>
+            </div>
+
+            <label for="rango" class="form-label">Ingresa el rango </label>
+            <input type="range" class="form-range" min="18" max="100" id="rango">
+
+            <div class="mb-3">
+                <label for="Monto_del_prestamo" class="form-label">Monto del préstamo</label>
+                <input type="number" class="form-control" id="Monto_del_prestamo" name="Monto_del_prestamo" placeholder="Coloca el monto del préstamo">
+            </div>
+
+
+//arrelgar esta linea y consultar banjico para lo de la taza de interes 
+            <label for="Número de meses igual que score" class="form-label">Número de meses igual que score</label>
+            <input type="range" class="form-range" min="12" max="60" step="12" id="mese_score">
+
+            <script>
+            // This is an example script, please modify as needed
+            const rangeInput = document.getElementById('range4');
+            const rangeOutput = document.getElementById('rangeValue');
+
+            // Set initial value
+            rangeOutput.textContent = rangeInput.value;
+
+            rangeInput.addEventListener('input', function() {
+                rangeOutput.textContent = this.value;
+            });
+            </script>
+            <!-- Botón de envío -->
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>
